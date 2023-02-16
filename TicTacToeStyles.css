@@ -1,0 +1,101 @@
+
+/*asterik is the everything selector*/
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 'Chalkduster';
+}
+
+/*page bg color*/
+.background { 
+    background-color: rgb(42, 41, 41);
+    height: 100vh; /*set bg color height to the entire page*/
+    padding-top: 1px; /*avoid margin collapsing*/
+}
+
+/*headers*/
+.title { 
+    color: white;
+    text-align: center;
+    font-size: 40px;
+    margin-top: 10%;
+}
+
+.display {
+    color: white;
+    font-size: 25px;
+    text-align: center;
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+
+
+/*hide utility class: hides user interface (UI) elements on the page 
+    by applying it to the given element */
+.hide {
+    display: none;
+}
+
+/*styling the grid*/
+.board {
+    max-width: 300px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+}
+
+.tile {
+    border: 2px solid white;
+    min-width: 100px;
+    min-height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 50px;
+    cursor: pointer; /*lets the user know the box is clickable*/
+}
+
+/*removing side borders on the grid*/
+.tile:first-child,
+.tile:nth-child(2),
+.tile:nth-child(3) {
+    border-top: none;
+}
+
+.tile:nth-child(3n+1){
+    border-left: none;
+}
+
+.tile:nth-child(3n+3){
+    border-right: none;
+}
+
+.tile:last-child,
+.tile:nth-child(8),
+.tile:nth-child(7) {
+    border-bottom: none;
+}
+
+/*Xs and Os*/
+.playerX {
+    color: rgb(250, 168, 210);
+}
+
+.playerO {
+    color: skyblue;
+}
+
+/*restart button*/
+
+#restart {
+    background-color: rgb(73, 73, 73);
+    color: white;
+    display: flex;
+    margin: 0 auto;
+    margin-top: 1em;
+    border-radius: 8px;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+    padding: 8px;
+}
